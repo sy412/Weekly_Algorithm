@@ -1,13 +1,13 @@
 function solution(str) {
   let answer = ""; //undefined 주의
 
-  for (let string of str) {
-    if (string == string.toUpperCase()) {
+  for (let x of str) {
+    if (string == x.toUpperCase()) {
       // 너 대문자 돼라
       //-질문
-      answer += string.toLowerCase(); //(행위)
+      answer += x.toLowerCase(); //(행위)
     } else {
-      answer += string.toUpperCase(); //행위/같이 쓰는 이유 :효율성적인 측면
+      answer += x.toUpperCase(); //행위/같이 쓰는 이유 :효율성적인 측면
     }
   }
   return answer;
