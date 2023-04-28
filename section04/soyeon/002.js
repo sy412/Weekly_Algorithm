@@ -15,7 +15,7 @@ N개의 자연수가 입력되면 각 자연수를 뒤집은 후 그 뒤집은 �
 function isPrime(num) {
   //소수 판별
   if (num === 1) return false;
-  for (let i = 2; i < Math.sqrt(num); i++) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     //num의 제곱근까지만(이후로는 대칭이므로)
     if (num % i === 0) return false;
   }
