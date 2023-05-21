@@ -20,6 +20,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/132267
 정답은 항상 int 범위를 넘지 않게 주어집니다.
 
 */
+/복반복
 function solution(a, b, n) {
   var answer = 0;
 
@@ -29,6 +30,17 @@ function solution(a, b, n) {
     answer += cola; //콜라 병 수 더하기
     let bottle = n % a; //남은 빈 병
     n = cola + bottle;
+  }
+  return answer;
+}
+//재귀
+function solution(a, b, n) {
+  var answer = 0;
+
+  if (n >= a) {
+    let cola = Math.floor(n / a) * b;
+    let bottle = n % a;
+    answer = cola + solution(a, b, cola + bottle);
   }
   return answer;
 }
